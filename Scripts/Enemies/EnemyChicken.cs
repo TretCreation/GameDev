@@ -77,4 +77,3 @@ public class EnemyChicken : MonoBehaviour
         }  
     }
 }
-// test99999
