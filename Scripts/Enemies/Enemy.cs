@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//commiiiiiiiiiiiit
-//test
 
 public class Enemy : MonoBehaviour
 {
@@ -29,3 +27,4 @@ public class Enemy : MonoBehaviour
         }
     }
 }
+//test666
