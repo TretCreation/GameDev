@@ -130,7 +130,8 @@
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\Chunk.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\InputChunkState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\LogLevel.cs" />
-     <Compile Include="Assets\Scripts\TestNetworkManager.cs" />
+     <Compile Include="Assets\Scripts\NetworkManager.cs" />
+     <Compile Include="Assets\Scripts\MethodExtensions.cs" />
      <None Include="Assets\Materials\enemies\wolf\update_downpose\readme.txt" />
      <None Include="Assets\SocketIO\JSONObject\readme.txt" />
      <None Include="Assets\SocketIO\Readme.txt" />
@@ -359,7 +360,7 @@
         <HintPath>E:\Programs\UnityEditor\2020.3.24f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>E:\Programs\UnityEditor\2020.3.24f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -707,34 +708,34 @@
         <HintPath>E:\Programs\UnityEditor\2020.3.24f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>E:\Programs\Unity Source\Lab 4\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
