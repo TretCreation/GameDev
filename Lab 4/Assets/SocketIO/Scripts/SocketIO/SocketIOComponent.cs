@@ -42,11 +42,10 @@ namespace SocketIO
 	{
 		#region Public Properties
 
-		[Header("Socket IO Component")]
-		public string url = "ws://127.0.0.1:4567/socket.io/?EIO=4&transport=websocket";
-		public bool autoConnect = true;
+		public string url = "ws://127.0.0.1:4567/socket.io/?EIO=3&transport=websocket";
+		public bool autoConnect = false;
 		public int reconnectDelay = 5;
-		public float ackExpirationTime = 1800f;
+		public float ackExpirationTime = 30f;
 		public float pingInterval = 25f;
 		public float pingTimeout = 60f;
 
@@ -177,6 +176,11 @@ namespace SocketIO
 
 		#region Public Interface
 
+		public void SetHeader(string header, string value)
+		{
+			ws.SetHeader(header, value);
+		}
+
 		public void Connect()
 		{
 			connected = true;
@@ -238,6 +242,11 @@ namespace SocketIO
 		{
 			EmitMessage(++packetId, string.Format("[\"{0}\"]", ev));
 			ackList.Add(new Ack(packetId, action));
+		}
+
+		public void Emit(string ev, string str)
+		{
+			EmitMessage(-1, string.Format("[\"{0}\",\"{1}\"]", ev, str));
 		}
 
 		public void Emit(string ev, JSONObject data)
@@ -331,12 +340,15 @@ namespace SocketIO
 			{
 				ws.Send(encoder.Encode(packet));
 			}
-			catch (SocketIOException ex)
-			{
+			// @fix: This fix prevents from warning errors about the unused "ex" variable if the SOCKET_IO_DEBUG define is not declared
 #if SOCKET_IO_DEBUG
+			catch(SocketIOException ex)
+			{
 				debugMethod.Invoke(ex.ToString());
-#endif
 			}
+#else
+			catch (SocketIOException) { }
+#endif
 		}
 
 		private void OnOpen(object sender, EventArgs e)
@@ -408,7 +420,7 @@ namespace SocketIO
 
 		private void OnError(object sender, ErrorEventArgs e)
 		{
-			EmitEvent("error");
+			EmitEvent(new SocketIOEvent("error", JSONObject.CreateStringObject(e.Message)));
 		}
 
 		private void OnClose(object sender, CloseEventArgs e)
@@ -430,12 +442,15 @@ namespace SocketIO
 				{
 					handler(ev);
 				}
+				// @fix: This fix prevents from warning errors about the unused "ex" variable if the SOCKET_IO_DEBUG define is not declared
+#if SOCKET_IO_DEBUG
 				catch (Exception ex)
 				{
-#if SOCKET_IO_DEBUG
 					debugMethod.Invoke(ex.ToString());
-#endif
 				}
+#else
+				catch (Exception) { }
+#endif
 			}
 		}
 

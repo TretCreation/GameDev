@@ -3,182 +3,29 @@ guid: b709aefa9a4118742894bb4e8a8f2060
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -965010625426434404
+      213: 21300000
     second: Fire Bullet_29
   - first:
-      213: 5806510726646737879
+      213: 21300002
     second: Fire Bullet_30
   - first:
-      213: 8160452799169898198
+      213: 21300004
     second: Fire Bullet_31
   - first:
-      213: -2165706016578061540
+      213: 21300006
     second: Fire Bullet_32
   - first:
-      213: -4762297994934892544
+      213: 21300008
     second: Fire Bullet_49
   - first:
-      213: -488182750995903822
+      213: 21300010
     second: Fire Bullet_50
   - first:
-      213: -7125584032777198595
+      213: 21300012
     second: Fire Bullet_51
   - first:
-      213: -759468311302792979
+      213: 21300014
     second: Fire Bullet_52
-  - first:
-      213: -4319856564551013276
-    second: Fire Bullet_90
-  - first:
-      213: -2633977753634430279
-    second: Fire Bullet_118
-  - first:
-      213: -3059791752558274082
-    second: Fire Bullet_119
-  - first:
-      213: -2090131345683771490
-    second: Fire Bullet_120
-  - first:
-      213: -2593436430614934772
-    second: Fire Bullet_121
-  - first:
-      213: 420314626313078563
-    second: Fire Bullet_122
-  - first:
-      213: -1968279666601755988
-    second: Fire Bullet_123
-  - first:
-      213: 1006034299732520845
-    second: Fire Bullet_124
-  - first:
-      213: 6293543613765910823
-    second: Fire Bullet_125
-  - first:
-      213: 3354869329540997726
-    second: Fire Bullet_126
-  - first:
-      213: 7244949820492896640
-    second: Fire Bullet_127
-  - first:
-      213: 8972098071546929799
-    second: Fire Bullet_128
-  - first:
-      213: 25246612263293698
-    second: Fire Bullet_129
-  - first:
-      213: -7197629699578283399
-    second: Fire Bullet_130
-  - first:
-      213: -5020175969756131619
-    second: Fire Bullet_131
-  - first:
-      213: -2822813756521458092
-    second: Fire Bullet_132
-  - first:
-      213: 8254173354258738372
-    second: Fire Bullet_133
-  - first:
-      213: -4254885901198981153
-    second: Fire Bullet_134
-  - first:
-      213: 2414798406249366502
-    second: Fire Bullet_135
-  - first:
-      213: 1129318695141501493
-    second: Fire Bullet_136
-  - first:
-      213: 8650589647577814463
-    second: Fire Bullet_137
-  - first:
-      213: 4333084892533599225
-    second: Fire Bullet_138
-  - first:
-      213: -5171697192714140740
-    second: Fire Bullet_139
-  - first:
-      213: 6079454715054812938
-    second: Fire Bullet_140
-  - first:
-      213: -5715486973590718933
-    second: Fire Bullet_141
-  - first:
-      213: -8513347869223425761
-    second: Fire Bullet_142
-  - first:
-      213: -7910871857173889838
-    second: Fire Bullet_143
-  - first:
-      213: -4971843528792202148
-    second: Fire Bullet_144
-  - first:
-      213: -6175384452703797681
-    second: Fire Bullet_145
-  - first:
-      213: 7206355576483541672
-    second: Fire Bullet_146
-  - first:
-      213: 7364586004163864159
-    second: Fire Bullet_147
-  - first:
-      213: -8068043674688978886
-    second: Fire Bullet_148
-  - first:
-      213: -3883860616941059597
-    second: Fire Bullet_149
-  - first:
-      213: -2067672280418819026
-    second: Fire Bullet_150
-  - first:
-      213: -2671289315826215659
-    second: Fire Bullet_151
-  - first:
-      213: -4554255014231800269
-    second: Fire Bullet_152
-  - first:
-      213: 3419962566038865643
-    second: Fire Bullet_153
-  - first:
-      213: -1251367613336791953
-    second: Fire Bullet_154
-  - first:
-      213: -8906256775982486102
-    second: Fire Bullet_155
-  - first:
-      213: 7444497862579022824
-    second: Fire Bullet_156
-  - first:
-      213: 4374534128848452206
-    second: Fire Bullet_157
-  - first:
-      213: -7459482680057767840
-    second: Fire Bullet_158
-  - first:
-      213: 8256597343014593946
-    second: Fire Bullet_159
-  - first:
-      213: 125186490970418822
-    second: Fire Bullet_160
-  - first:
-      213: 5640903730531490260
-    second: Fire Bullet_161
-  - first:
-      213: 8455372106858327865
-    second: Fire Bullet_162
-  - first:
-      213: -8532548438298252473
-    second: Fire Bullet_163
-  - first:
-      213: -4277081257524066527
-    second: Fire Bullet_164
-  - first:
-      213: -3191369227082717625
-    second: Fire Bullet_165
-  - first:
-      213: -4261089951296593029
-    second: Fire Bullet_166
-  - first:
-      213: -4835063258197316358
-    second: Fire Bullet_167
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -238,7 +85,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -251,7 +98,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -263,7 +110,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -283,7 +130,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c96daf2f2f79b92f0800000000000000
-      internalID: -965010625426434404
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -304,7 +151,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 7db264eddbed49050800000000000000
-      internalID: 5806510726646737879
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -325,7 +172,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6d62ddcb590cf3170800000000000000
-      internalID: 8160452799169898198
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -346,7 +193,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c1b30f13addd1f1e0800000000000000
-      internalID: -2165706016578061540
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -367,7 +214,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 008c951943be8edb0800000000000000
-      internalID: -4762297994934892544
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -388,7 +235,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2ba8a6ddf50a939f0800000000000000
-      internalID: -488182750995903822
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -409,7 +256,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: df3ae1d3317dc1d90800000000000000
-      internalID: -7125584032777198595
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -430,7 +277,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: de891ae3893d575f0800000000000000
-      internalID: -759468311302792979
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []

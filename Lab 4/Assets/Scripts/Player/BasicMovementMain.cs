@@ -6,7 +6,7 @@ public class BasicMovementMain : MonoBehaviour
 {
 	public Animator animator;
 
-	[SerializeField] private Transform shootPosition;
+	// [SerializeField] private Transform shootPosition;
 	private float speed = 2f;
 
 
