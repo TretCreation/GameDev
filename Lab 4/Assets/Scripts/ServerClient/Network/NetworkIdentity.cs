@@ -1,24 +1,22 @@
+﻿using SocketIO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ServerClient.Utility;
-using SocketIO;
 
-namespace ServerClient.Network
+namespace ServerClient
 {
 	public class NetworkIdentity : MonoBehaviour
 	{
-		[SerializeField]
-		[GreyOut]
-		private string id;
 
+		[Header("Helpful Values")]
 		[SerializeField]
-		[GreyOut]
+		private string id;
+		[SerializeField]
 		private bool isControlling;
 
 		private SocketIOComponent socket;
 
-		public void Awake()
+		public void AWake()
 		{
 			isControlling = false;
 		}
@@ -26,7 +24,7 @@ namespace ServerClient.Network
 		public void SetControllerID(string ID)
 		{
 			id = ID;
-			isControlling = (NetworkManager.ClientID == ID) ? true : false;
+			isControlling = (NetworkClient.ClientID == ID) ? true : false; //Check incoming id versuses the one we have saved from the server
 		}
 
 		public void SetSocketReference(SocketIOComponent Socket)

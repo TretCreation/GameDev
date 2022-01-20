@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{571af197-13fc-1277-629a-1b9e8c7fdefa}</ProjectGuid>
+    <ProjectGuid>{504c3385-eeb5-249f-d65f-52659f4c4d93}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -38,18 +38,23 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemies\EnemyBunny.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocket.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Parser.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpConnection.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ChunkedRequestStream.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\EndPointListener.cs" />
      <Compile Include="Assets\SocketIO\Scripts\Test\TestSocketIO.cs" />
+     <Compile Include="Assets\SocketIO\JSONObject\JSONObject.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\NetworkCredential.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\CompressionMethod.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerResponse.cs" />
+     <Compile Include="Assets\Scripts\ServerClient\Network\NetworkIdentity.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\CloseStatusCode.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\ByteOrder.cs" />
      <Compile Include="Assets\Scripts\Objects\Cliff.cs" />
+     <Compile Include="Assets\Scripts\Player\Move.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Rsv.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpHeaderInfo.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketPacketType.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ResponseStream.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\RequestStream.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\LogData.cs" />
@@ -59,6 +64,7 @@
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\Cookie.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\QueryStringCollection.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\InputState.cs" />
+     <Compile Include="Assets\SocketIO\JSONObject\VectorTemplates.cs" />
      <Compile Include="Assets\Scripts\Player\Shooting.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Fin.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpDigestIdentity.cs" />
@@ -66,25 +72,30 @@
      <Compile Include="Assets\Scripts\Enemies\EnemyWolf.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\AuthenticationSchemes.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\AuthenticationResponse.cs" />
-     <Compile Include="Assets\Scripts\Billboard.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Logger.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpVersion.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListener.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\HandshakeBase.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOException.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ListenerAsyncResult.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\AuthenticationChallenge.cs" />
+     <Compile Include="Assets\Scripts\ServerClient\Network\NetworkTransform.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\WebSockets\TcpListenerWebSocketContext.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Mask.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\WebSockets\HttpListenerWebSocketContext.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Packet.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerException.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpStreamAsyncResult.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\WebHeaderCollection.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\AuthenticationBase.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketException.cs" />
+     <Compile Include="Assets\SocketIO\JSONObject\JSONTemplates.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerPrefixCollection.cs" />
      <Compile Include="Assets\Scripts\Objects\Spawner.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOEvent.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\ErrorEventArgs.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\AssemblyInfo.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\EnginePacketType.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerRequest.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ReadBufferState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ListenerPrefix.cs" />
@@ -98,45 +109,30 @@
      <Compile Include="Assets\Scripts\Weapon\NumberOfBullets.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\ChunkStream.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\EndPointManager.cs" />
-     <Compile Include="Assets\Scripts\Player\BasicMovementMain.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpListenerContext.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketFrame.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\CookieException.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\WebSockets\WebSocketContext.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOComponent.cs" />
      <Compile Include="Assets\Scripts\Weapon\Bullet.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyChicken.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\WebSocketStream.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\LineState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\HandshakeResponse.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Decoder.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpStatusCode.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\HttpUtility.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Ext.cs" />
+     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Encoder.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\PayloadData.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\Chunk.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\Net\InputChunkState.cs" />
      <Compile Include="Assets\SocketIO\WebsocketSharp\LogLevel.cs" />
-     <Compile Include="Assets\Scripts\ServerClient\Network\NetworkIdentity.cs" />
-     <Compile Include="Assets\Scripts\Player\Move.cs" />
-     <Compile Include="Assets\Scripts\ServerClient\Network\NetworkManager.cs" />
-     <Compile Include="Assets\Scripts\ServerClient\Utility\GreyOut.cs" />
-     <Compile Include="Assets\Scripts\ServerClient\Network\NetworkTransform.cs" />
-     <Compile Include="Assets\Scripts\ServerClient\Utility\MethodExtensions.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOException.cs" />
-     <Compile Include="Assets\SocketIO\JSONObject\JSONObject.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOComponent.cs" />
-     <Compile Include="Assets\SocketIO\JSONObject\JSONTemplates.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Parser.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Decoder.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\EnginePacketType.cs" />
-     <Compile Include="Assets\SocketIO\JSONObject\VectorTemplates.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketIOEvent.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\SocketPacketType.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Encoder.cs" />
-     <Compile Include="Assets\SocketIO\Scripts\SocketIO\Packet.cs" />
-     <None Include="Assets\SocketIO\JSONObject\readme.txt" />
+     <Compile Include="Assets\Scripts\ServerClient\Network\NetworkClient.cs" />
      <None Include="Assets\Materials\enemies\wolf\update_downpose\readme.txt" />
-     <None Include="Assets\SocketIO\readme.txt" />
+     <None Include="Assets\SocketIO\JSONObject\readme.txt" />
+     <None Include="Assets\SocketIO\Readme.txt" />
      <None Include="Assets\Materials\enemies\wolf\readme.txt" />
      <None Include="Assets\Materials\enemies\wolf\update_tailwag\readme.txt" />
     <Reference Include="UnityEngine">
@@ -362,7 +358,7 @@
         <HintPath>E:\Programs\UnityEditor\2020.3.24f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>E:\GameLabs\Lab 4\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>E:\Programs\UnityEditor\2020.3.24f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -710,52 +706,52 @@
         <HintPath>E:\Programs\UnityEditor\2020.3.24f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-        <HintPath>E:\GameLabs\Lab 4\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+        <HintPath>E:\GameLabs\Lab4\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

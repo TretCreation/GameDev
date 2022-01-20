@@ -34,12 +34,11 @@ io.on('connection', function(socket) {
 	}
 
 	socket.on('updatePosition', function(data) {
-		// new Intl.NumberFormat().format(data);
-		// new Intl.NumberFormat('ru-RU').format(data)
 		player.position.x = data.position.x;
-
+		// new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number)
 		// player.position.x = float.Parse((Mathf.Round(transform.position.x * 1000.0f) / 1000.0f).ToString("0.000"), NumberStyles.Any, CultureInfo.InvariantCulture);
 		player.position.y = data.position.y;
+		// new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(y)
 
 		socket.broadcast.emit('updatePosition', player);
 	});

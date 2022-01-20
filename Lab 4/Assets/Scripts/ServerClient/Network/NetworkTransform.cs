@@ -1,20 +1,19 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ServerClient.Utility;
 
-namespace ServerClient.Network
+namespace ServerClient
 {
 	[RequireComponent(typeof(NetworkIdentity))]
 	public class NetworkTransform : MonoBehaviour
 	{
 
 		[SerializeField]
-		[GreyOut]
 		private Vector3 oldPosition;
 
 		private NetworkIdentity networkIdentity;
 		private Player player;
+
 		private float stillCounter = 0;
 
 		public void Start()
@@ -45,6 +44,7 @@ namespace ServerClient.Network
 				else
 				{
 					stillCounter += Time.deltaTime;
+
 					if (stillCounter >= 1)
 					{
 						stillCounter = 0;
@@ -53,15 +53,14 @@ namespace ServerClient.Network
 				}
 			}
 		}
-		public void sendData()
+
+		private void sendData()
 		{
+			//Update player information
 			player.position.x = Mathf.Round(transform.position.x * 1000.0f) / 1000.0f;
 			player.position.y = Mathf.Round(transform.position.y * 1000.0f) / 1000.0f;
 
-			string json = JsonUtility.ToJson(player);
-			Debug.Log(json);
-
-			networkIdentity.GetSocket().Emit("updatePosition", new JSONObject(json));
+			networkIdentity.GetSocket().Emit("updatePosition", new JSONObject(JsonUtility.ToJson(player)));
 		}
 	}
 }
